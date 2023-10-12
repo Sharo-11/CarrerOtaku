@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/styles/create.css" />
+    <title>Create an Account</title>
+  </head>
+  <body>
+    <div class="up-card my-0 my-lg-500">
+      <h1>Join as a student or company</h1>
+      <div class="up-button-box-radio-group pb-10">
+        <label>
+          <input
+            type="radio"
+            name="type"
+            value="student"
+            onclick="toggleButton('student')"
+          />
+          <img
+            src="../static/images/student.png"
+            alt="Student Photo"
+            class="student-image"
+          />
+          <span>Student</span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="type"
+            value="company"
+            onclick="toggleButton('company')"
+          />
+          <img
+            src="../static/images/company.png"
+            alt="Company Photo"
+            class="company-image"
+          />
+          <span>Company</span>
+        </label>
+      </div>
+      <button
+        data-qa="btn-apply"
+        type="button"
+        disabled="disabled"
+        class="button"
+        id="createAccountButton"
+      >
+        Create Account
+      </button>
+      <div class="login-link" onclick="redirectToLoginPage()">
+        Already have an account? Log in
+      </div>
+    </div>
+
+    <script>
+      function toggleButton(type) {
+          const createAccountButton = document.getElementById("createAccountButton");
+          if (type === "student") {
+              createAccountButton.textContent = "Join as a Student";
+              createAccountButton.setAttribute("data-qa", "btn-student"); // Add a data attribute to identify the button
+              createAccountButton.setAttribute("onclick", "redirectToStudentPage()");
+          } else if (type === "company") {
+              createAccountButton.textContent = "Join as a Company";
+              createAccountButton.setAttribute("data-qa", "btn-company"); // Add a data attribute to identify the button
+              createAccountButton.setAttribute("onclick", "redirectToCompanyPage()");
+          }
+          createAccountButton.removeAttribute("disabled");
+      }
+  
+      function redirectToStudentPage() {
+          window.location.href = "/signinasstudent"; // Use Flask route
+      }
+  
+      function redirectToCompanyPage() {
+          window.location.href = "/signinascompany"; // Use Flask route
+      }
+  </script>
+  
+  </body>
+</html>

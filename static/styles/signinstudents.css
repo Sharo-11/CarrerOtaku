@@ -1,0 +1,79 @@
+body {
+    font-family: "Rza", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.my-form {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.center-h1 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.text-field {
+    margin-bottom: 20px;
+}
+
+.text-field input[type="text"],
+.text-field input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.accept-terms {
+    margin-top: 30px; 
+    display: flex;
+    align-items: center;
+}
+
+.accept-terms input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.create-account-button {
+    display: block;
+    margin-top: 20px;
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #FFCB74;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.accept-terms input[type="checkbox"]:checked + .create-account-button {
+    cursor: pointer;
+    background-color: #FFCB74;
+}

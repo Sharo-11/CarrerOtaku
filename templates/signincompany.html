@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/signincompany.css">
+</head>
+<body>
+    <form class="my-form">
+        <div class="center-h1">
+            <h1>Sign up to hire talent</h1>
+        </div>
+        
+        <div class="text-field">
+            <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
+        </div>
+        
+        <div class="text-field">
+            <label for="companyLogo">Company Logo (Recommended size: 300x300 pixels):</label>
+            <input type="file" id="companyLogo" name="companyLogo" accept="image/*" capture="camera" required>
+        </div>
+        
+        <div class="text-field">
+            <textarea id="companyDescription" name="companyDescription" rows="4" placeholder="Company Description" required></textarea>
+        </div>
+        
+        <div class="text-field">
+            <input type="text" id="industry" name="industry" placeholder="Industry" required>
+        </div>
+        
+        <div class="text-field">
+            <input type="text" id="campus" name="campus" placeholder="Campus" required>
+        </div>
+        
+        <div class="text-field">
+            <input type="url" id="websiteURL" name="websiteURL" placeholder="Website URL" required>
+        </div>
+        
+        <div class="text-field">
+            <input type="email" id="contactEmail" name="contactEmail" placeholder="Contact Email Address" required>
+        </div>
+        
+        <div class="text-field">
+            <input type="tel" id="contactPhone" name="contactPhone" placeholder="Contact Phone Number" required>
+        </div>
+        
+        <div class="text-field">
+            <input type="text" id="primaryContact" name="primaryContact" placeholder="Primary Contact Person" required>
+        </div>
+        
+        <div class="text-field">
+            <input type="number" id="companySize" name="companySize" placeholder="Company Size" required>
+        </div>
+        
+
+        <div class="accept-terms">
+            <input type="checkbox" id="acceptTerms" name="acceptTerms">
+            <label for="acceptTerms">Yes, I understand and agree to the Terms of Service, including the User Agreement and Privacy Policy.</label>
+        </div>
+        
+        <button class="create-account-button" disabled>Create Account</button>
+    </form>
+</body>
+</html>

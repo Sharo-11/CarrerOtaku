@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/student.css">
+    <title>Student Page</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../static/images/logo1.png" alt="Your Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <img src="../static/images/home.png" alt="Home Icon">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <img src="../static/images/jobs.png" alt="Jobs Icon">
+                    <a href="#">Jobs</a>
+                </li>
+                <li>
+                    <img src="../static/images/messages.png" alt="Messages Icon">
+                    <a href="#">Messages</a>
+                </li>
+                <li>
+                    <img src="../static/images/community.png" alt="Community Icon">
+                    <a href="#">Community</a>
+                </li>
+                <li>
+                    <img src="../static/images/settings.png" alt="Settings Icon">
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <img src="../static/images/FAQ.png" alt="FAQ Icon">
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+        <div class="notification-logo">
+            <img src="../static/images/notification.png" alt="Notification Logo">
+        </div>
+        <div class="profile-logo" onclick="changeProfilePic()">
+            <img id="profile-img" src="../static/images/profile.png" alt="Profile Logo">
+        </div>
+        <aside class="filters">
+            <h1>FILTERS</h1>
+            <p>Working Schedule :</p>
+            <ul>
+                <li><input type="checkbox" id="fullTime"> <label for="fullTime">Full Time</label></li>
+                <li><input type="checkbox" id="partTime"> <label for="partTime">Part Time</label></li>
+                <li><input type="checkbox" id="volunteering"> <label for="volunteering">Volunteering</label></li>
+                <li><input type="checkbox" id="projectWork"> <label for="projectWork">Project Work</label></li>
+            </ul>
+            <p>Employment Type :</p>
+            <ul>
+                <li><input type="checkbox" id="fullDay"> <label for="fullDay">Full Day</label></li>
+                <li><input type="checkbox" id="flexibleSchedule"> <label for="flexibleSchedule">Flexible Schedule</label></li>
+                <li><input type="checkbox" id="shiftWork"> <label for="shiftWork">Shift Work</label></li>
+                <li><input type="checkbox" id="distantWork"> <label for="distantWork">Distant Work</label></li>
+                <li><input type="checkbox" id="shiftMethod"> <label for="shiftMethod">Shift Method</label></li>
+            </ul>
+        </aside>
+    </header>
+</body>
+</html>

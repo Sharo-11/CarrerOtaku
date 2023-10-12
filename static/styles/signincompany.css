@@ -1,0 +1,107 @@
+body {
+    font-family: "Rza", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 70px;
+}
+
+.my-form {
+    max-width: 500px;
+    width: 100%;
+    padding: 70px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.center-h1 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.socials-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.socials-row a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+
+.socials-row img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.text-field {
+    margin-bottom: 20px;
+}
+
+.text-field input[type="text"],
+.text-field input[type="password"],
+.text-field input[type="file"],
+.text-field textarea,
+.text-field input[type="url"],
+.text-field input[type="email"],
+.text-field input[type="tel"],
+.text-field input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.accept-terms {
+    margin-top: 30px; 
+    display: flex;
+    align-items: center;
+}
+
+.accept-terms input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.create-account-button {
+    display: block;
+    margin-top: 20px;
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #FFCB74;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.accept-terms input[type="checkbox"]:checked + .create-account-button {
+    cursor: pointer;
+    background-color: #FFCB74;
+}

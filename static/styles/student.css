@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+header {
+    background-color: #f6f6f6;
+    color: #111;
+    padding: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logo img {
+    max-width: 200px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 10px; 
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 5px; 
+    border-radius: 20px;
+    height: 15px; 
+    background-color: #f6f6f6;
+    color: #111111; 
+}
+
+nav ul img {
+    width: 40px;
+    height: 41px;
+    margin: 0;
+    top: -20px; /* Adjust the value to move the images upward */
+    right: 10px;
+}
+
+nav {
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-top: 15px;
+    max-width: 30px;
+    max-height: 70px;
+    margin-right: 470px; /* Adjust the desired right margin */
+    margin-top: -10px; /* Adjust the desired negative margin to move them up */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav ul li img {
+    margin-bottom: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: bold;
+}
+
+.notification-logo img,
+.profile-logo img {
+    max-width: 50px;
+    margin-top: 10px;
+    margin-right: 1px;
+    padding: 1px;
+}
+
+.notification-logo {
+    margin-right: 20px;
+}
+
+/* Add styles for the filters section */
+.filters {
+    padding: 10px;
+    font-size: 18px; /* Corrected the font-size value */
+    position: absolute;
+    right: -30px; 
+    top: 150px;
+    width: 300px;
+    background-color: #f6f6f6;
+}
+
+.filters h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.filter-section p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ffcb74;
+}
+
+.filter-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filter-section li {
+    margin-bottom: 5px;
+}
+
+/* Common styles for filter section and filters header */
+.filter-section p,
+.filters h1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    color: #ffcb74;
+}

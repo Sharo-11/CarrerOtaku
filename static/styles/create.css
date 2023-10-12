@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the body take up the full viewport height */
+    margin: 0; /* Remove default margin */
+  }
+  h1 {
+    font-size: 32px;
+    font-family: "Rza", sans-serif; /* Use "Rza" font with a fallback to sans-serif */
+    margin-bottom: 20px;
+    margin-top: -10px; /* Add negative margin to shift the h1 higher */
+  }
+  .up-card {
+    padding: 120px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center the content inside .up-card */
+    margin: 20px auto; /* Center the card horizontally and adjust margin */
+    max-width: 500px; /* Limit card width */
+  }
+  .up-button-box-radio-group {
+    margin-top: 30px; /* Increase the top margin */
+    margin-bottom: 30px; /* Increase the bottom margin */
+    text-align: left; /* Shift text to the left */
+  }
+  .up-button-box-radio-group label {
+    display: flex;
+    align-items: center; /* Center label content vertically */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Add border to the label */
+    border-radius: 5px; /* Add border radius to the label */
+    padding: 15px; /* Increase the padding for the label */
+    cursor: pointer; /* Add cursor pointer to the label */
+  }
+  .up-button-box-radio-group label:hover {
+    border-color: #FFCB74; /* Change border color on hover */
+  }
+  .up-button-box-radio-group input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+  }
+  .button {
+    display: block;
+    margin: 20px auto; /* Center horizontally and add top margin */
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #FFCB74;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+  }
+  .button[disabled] {
+    background-color: #CBD88B; /* Change the background color to grey */
+    cursor: not-allowed; /* Change the cursor to indicate it's disabled */
+  }
+  /* Reduce the size of the student image */
+  .student-image {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  /* Reduce the size of the company image */
+  .company-image {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  /* Adjust the margin between the image and text */
+  .up-button-box-radio-group span {
+    margin-right: 5px; /* Reduce the margin between the image and text */
+  }
+  .student-button {
+    background-color: #FFCB74;
+  }
+  .company-button {
+    background-color: #FFCB74;
+  }
+  /* Style the radio buttons for student and company */
+  .up-button-box-radio-group input[type="radio"] + label:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #FFCB74;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .up-button-box-radio-group input[type="radio"]:checked + label:before {
+    background-color: #FFCB74; /* Change background color when radio is checked */
+    border: 2px solid #FFF; /* Add border to indicate selection */
+  }
+  .login-link {
+    margin-top: 20px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #FFCB74;
+    cursor: pointer;
+  }
