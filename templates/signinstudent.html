@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Sign Up - Student</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/signinstudents.css">
-</head>
-<body>
-    <form class="my-form">
-        <div class="center-h1">
-            <h1>Sign up to find work you love</h1>
-        </div>
-        <div class="text-field">
-            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-        </div>
-        <div class="text-field">
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-        </div>
-        <div class="text-field">
-            <input type="text" id="email" name="email" placeholder="Email Address" required>
-        </div>
-        <div class="text-field">
-            <input type="password" id="password" name="password" placeholder="Password (8 or more characters)" minlength="8" required>
-        </div>
-        <div class="text-field">
-            <input type="text" id="campus" name="campus" placeholder="Campus" required>
-        </div>
-        <div class="text-field">
-            <input type="text" id="department" name="department" placeholder="Department" required>
-        </div>
-        <div class="text-field">
-            <input type="text" id="studentId" name="studentId" placeholder="Student ID" required>
-        </div>
-        <div class="accept-terms">
-            <input type="checkbox" id="acceptTerms" name="acceptTerms">
-            <label for="acceptTerms">Yes, I understand and agree to the Terms of Service, including the User Agreement and Privacy Policy.</label>
-        </div>
-        <button class="create-account-button" disabled>Create Account</button>
-        <script>
-            document.getElementById('acceptTerms').addEventListener('change', function () {
-                document.querySelector('.create-account-button').disabled = !this.checked;
-            });
-        </script>        
-    </form>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/signinstudents.css" />
+  </head>
+
+  {% block content %} {% if first_name %}
+  <!-- <h1>Sign up to find work you love</h1> -->
+  <!-- Display user details or a welcome message if data is available -->
+  {% else %}
+  <form method="POST" class="my-form">
+    <div class="center-h1">
+        <h1>Sign up to find work you love</h1>
+    </div>
+    {{ form.hidden_tag() }}
+    <div class="text-field">
+      {{ form.first_name(class="form-control", placeholder="First Name") }}
+    </div>
+    <div class="text-field">
+      {{ form.last_name(class="form-control", placeholder="Last Name") }}
+    </div>
+    <div class="text-field">
+        {{ form.email(class="form-control", placeholder="Email") }}
+    </div>
+    <div class="text-field">
+      {{ form.password(class="form-control", placeholder="Password") }}
+    </div>
+    <div class="text-field">
+      {{ form.campus(class="form-control", placeholder="Campus") }}
+    </div>
+    <div class="text-field">
+      {{ form.dept(class="form-control", placeholder="Department") }}
+    </div>
+    <div class="text-field">
+      {{ form.student_id(class="form-control", placeholder="Student Id") }}
+    </div>
+    <div class="accept-terms">
+        <input type="checkbox" id="acceptTerms" name="acceptTerms">
+        <label for="acceptTerms">Yes, I understand and agree to the Terms of Service, including the User Agreement and Privacy Policy.</label>
+    </div>
+    <button class="create-account-button" disabled>Create Account</button>
+    <script>
+        document.getElementById('acceptTerms').addEventListener('change', function () {
+            document.querySelector('.create-account-button').disabled = !this.checked;
+        });
+    </script>   
+  </form>
+  {% endif %} {% endblock content %}
 </html>

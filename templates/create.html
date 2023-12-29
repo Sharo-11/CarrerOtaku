@@ -48,8 +48,14 @@
       </button>
       <div class="login-link" onclick="redirectToLoginPage()">
         Already have an account? Log in
-      </div>
     </div>
+    
+    <script>
+        function redirectToLoginPage() {
+            window.location.href = "http://127.0.0.1:5000/";
+        }
+    </script>
+      
 
     <script>
       function toggleButton(type) {
@@ -74,6 +80,8 @@
           window.location.href = "/signinascompany"; // Use Flask route
       }
   </script>
+
+
   
   </body>
 </html>
