@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/community.css">
+    <title>Student Community</title>
+</head>
+<body>
+    <header>
+        <h1>Student Community</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('discussion')">Discussion Forum</a>
+        <a href="#" onclick="showEventCalendar()">Event Calendar</a>
+        <a href="#" onclick="showSection('jobs')">Job and Internship Board</a>
+        <a href="#" onclick="showSection('projects')">Project Collaboration</a>
+        <a href="#" onclick="showSection('resources')">Resources</a>
+        <a href="#" onclick="showSection('blog')">Newsfeed/Blog</a>
+        <a href="#" onclick="showSection('feedback')">Feedback</a>
+    </nav>
+
+    <!-- Add discussion forum content here -->
+    <section id="discussion">
+        <h2>Discussion Forum</h2>
+        <div id="forum-container">
+            <form id="discussion-form">
+                <label for="discussion-topic">Topic:</label>
+                <input type="text" id="discussion-topic" name="discussion-topic" required>
+
+                <label for="discussion-category">Category:</label>
+                <select id="discussion-category" name="discussion-category">
+                    <option value="general">General</option>
+                    <option value="study">Study Tips</option>
+                    <option value="coding">Coding Questions</option>
+                </select>
+
+                <label for="discussion-message">Message:</label>
+                <textarea id="discussion-message" name="discussion-message" rows="4" required></textarea>
+
+                <button type="submit">Post</button>
+            </form>
+
+            <!-- Display existing discussions -->
+            <div id="existing-discussions">
+                <!-- Discussions will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar Section -->
+    <section id="events">
+        <h2>Event Calendar</h2>
+        <div id="event-calendar">
+            <div id="event-calendar-content">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Workshop on Web Development - January 5, 2024</li>
+                    <li>Seminar on Machine Learning - February 12, 2024</li>
+                    <li>Networking Event - February 21, 2024</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="jobs">
+        <h2>Job and Internship Board</h2>
+        <div id="job-board">
+            <!-- Add job board content here -->
+            <div id="job-filters">
+                <label for="job-category">Filter by Category:</label>
+                <select id="job-category" name="job-category">
+                    <option value="all">All</option>
+                    <option value="internship">Internship</option>
+                    <option value="job">Job</option>
+                </select>
+                <button onclick="filterJobs()">Apply Filters</button>
+            </div>
+            <div id="job-listings">
+                <!-- Sample Job Listing (replace with dynamic content) -->
+                <div class="job-listing">
+                    <h3>Software Developer Intern</h3>
+                    <p>Company: ABC Tech</p>
+                    <p>Location: Anywhere</p>
+                    <p>Category: Internship</p>
+                    <p>Description: Exciting opportunity for a software development intern...</p>
+                </div>
+                <!-- End of Sample Job Listing -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Project Collaboration</h2>
+        <div id="project-collaboration">
+            <div id="find-projects">
+                <h3>Find Projects</h3>
+                <p>Explore exciting projects that you can collaborate on. Connect with fellow students and contribute your skills to meaningful initiatives.</p>
+                <!-- Add content to showcase available projects for collaboration -->
+                <div class="project">
+                    <h4>Web Development Project</h4>
+                    <p>Looking for frontend and backend developers to join a web development project. Skills required: HTML, CSS, JavaScript, Node.js, React.</p>
+                    <button onclick="joinProject('web-development')">Join Project</button>
+                </div>
+                <!-- Add more project listings as needed -->
+            </div>
+            <div id="completed-projects">
+                <h3>Completed Projects</h3>
+                <p>Check out the projects that have been successfully completed by our talented community members.</p>
+                <!-- Add content to showcase completed projects -->
+                <div class="completed-project">
+                    <h4>Mobile App Development</h4>
+                    <p>Congratulations to our team of developers who successfully launched a mobile app for task management. The app is now available on app stores.</p>
+                </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <div id="resource-pool">
+            <h3>Resource Pool</h3>
+            <p>Explore a curated list of useful resources contributed by our community. Contribute your own resources to help fellow students.</p>
+            <!-- Add content to showcase resources -->
+            <div class="resource">
+                <h4>JavaScript Basics</h4>
+                <p>A comprehensive guide to understanding the fundamentals of JavaScript. Perfect for beginners.</p>
+                <a href="javascript-basics-guide.pdf" target="_blank">Download</a>
+                <button onclick="contributeResource('javascript-basics')">Contribute</button>
+            </div>
+            <!-- Add more resource listings as needed -->
+        </div>
+    </section>
+    
+    <section id="blog">
+        <h2>Newsfeed/Blog</h2>
+        <div id="blog-feed">
+            <h3>Community Newsfeed</h3>
+            <p>Stay updated with the latest blog posts and updates from our community members. Share your academic and professional journey with others.</p>
+            <!-- Add content to showcase blog posts -->
+            <div class="blog-post">
+                <h4>My Coding Journey</h4>
+                <p>Excited to share my experience learning Python and building my first web application. Read about the challenges and lessons learned.</p>
+                <button onclick="likePost('my-coding-journey')">Like</button>
+                <button onclick="commentOnPost('my-coding-journey')">Comment</button>
+            </div>
+            <!-- Add more blog post listings as needed -->
+        </div>
+    </section>
+    
+    <section id="feedback">
+        <h2>Feedback and Suggestions</h2>
+        <div id="feedback-form">
+            <p>We value your feedback! Share your thoughts, suggestions, or report any issues to help us enhance the community experience.</p>
+            <form id="user-feedback-form">
+                <label for="feedback-message">Feedback:</label>
+                <textarea id="feedback-message" name="feedback-message" rows="4" required></textarea>
+    
+                <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+    <script >
+        document.addEventListener('DOMContentLoaded', function () {
+    // Initial display of the discussion section
+    showSection('discussion');
+
+    // Add an event listener for the discussion form submission
+    document.getElementById('discussion-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the form values
+        const topic = document.getElementById('discussion-topic').value;
+        const category = document.getElementById('discussion-category').value;
+        const message = document.getElementById('discussion-message').value;
+
+        // Create a discussion object
+        const discussion = {
+            topic: topic,
+            category: category,
+            message: message,
+        };
+
+        // Save the discussion (you can send it to the server or store it locally)
+        saveDiscussion(discussion);
+
+        // Clear the form fields
+        document.getElementById('discussion-form').reset();
+
+        // Refresh the list of discussions
+        refreshDiscussions();
+    });
+});
+
+// Array to store discussions (for demonstration purposes)
+const discussions = [];
+
+function saveDiscussion(discussion) {
+    // Save the discussion to the array (you can modify this to send data to the server)
+    discussions.push(discussion);
+}
+
+function refreshDiscussions() {
+    // Display existing discussions
+    const existingDiscussionsContainer = document.getElementById('existing-discussions');
+    existingDiscussionsContainer.innerHTML = '';
+
+    discussions.forEach(discussion => {
+        const discussionDiv = document.createElement('div');
+        discussionDiv.innerHTML = `
+            <h3>${discussion.topic}</h3>
+            <p>Category: ${discussion.category}</p>
+            <p>${discussion.message}</p>
+            <hr>
+        `;
+        existingDiscussionsContainer.appendChild(discussionDiv);
+    });
+}
+
+    function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showEventCalendar() {
+        // Hide other sections and show the Event Calendar section
+        showSection('events');
+    }
+
+    const jobData = [
+        {
+            title: "Software Developer",
+            company: "XYZ Solutions",
+            location: "Cityville",
+            category: "job",
+            description: "XYZ Solutions is looking for a skilled Software Developer to join our team...",
+        },
+        // Add more job objects as needed
+    ];
+
+    function filterJobs() {
+        // Get selected category
+        const selectedCategory = document.getElementById('job-category').value;
+
+        // Filter jobs based on category
+        const filteredJobs = jobData.filter(job => {
+            return selectedCategory === 'all' || job.category === selectedCategory;
+        });
+
+        // Display filtered jobs
+        displayJobs(filteredJobs);
+    }
+
+    function displayJobs(jobs) {
+        const jobListingsContainer = document.getElementById('job-listings');
+
+        // Clear existing job listings
+        jobListingsContainer.innerHTML = '';
+
+        // Display filtered jobs
+        jobs.forEach(job => {
+            const jobListingDiv = document.createElement('div');
+            jobListingDiv.classList.add('job-listing');
+            jobListingDiv.innerHTML = `
+                <h3>${job.title}</h3>
+                <p>Company: ${job.company}</p>
+                <p>Location: ${job.location}</p>
+                <p>Category: ${job.category}</p>
+                <p>Description: ${job.description}</p>
+            `;
+            jobListingsContainer.appendChild(jobListingDiv);
+        });
+    }
+    function contributeResource(resourceId) {
+    // Implement logic to handle resource contribution
+    // You can prompt users to provide details about the resource they want to contribute and add it to the resource pool.
+    // For now, let's display an alert as a placeholder.
+    alert(`Contribute Resource: ${resourceId}`);
+}
+
+function likePost(postId) {
+    // Implement logic to handle liking a blog post
+    // You can increment the like count and update the UI accordingly.
+    // For now, let's display an alert as a placeholder.
+    alert(`Liked Post: ${postId}`);
+}
+
+function commentOnPost(postId) {
+    // Implement logic to handle commenting on a blog post
+    // You can show a comment form and add the comment to the respective blog post.
+    // For now, let's display an alert as a placeholder.
+    alert(`Commented on Post: ${postId}`);
+}
+
+function submitFeedback() {
+    // Implement logic to handle feedback submission
+    // You can send the feedback to your server or take other actions based on the user's input.
+    // For now, let's display an alert as a placeholder.
+    alert("Feedback Submitted!");
+}
+    </script>
+</body>
+</html>
