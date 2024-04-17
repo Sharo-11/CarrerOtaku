@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/styles/message.css">
+  <title>Message</title>
+</head>
+<body>
+  <div id="content">
+    <div id="contacts">
+      <h2>CHATS</h2>
+      <div class="contact" onclick="showChat('Sharvari')">
+        <img src="../static/images/photu.jpg" alt="Sharvari DP">
+        Sharvari Dubey
+      </div>
+      <div class="contact" onclick="showChat('Siddhi')">
+        <img src="../static/images/pic.jpg" alt="Siddhi DP">
+        Siddhi Jadhav
+      </div>
+      <div class="contact" onclick="showChat('xyz')">
+        <img src="xyz_dp.jpg" alt="XYZ DP">
+        XYZ
+      </div>
+      <div class="contact" onclick="showChat('contact4')">
+        <img src="abc_dp.jpg" alt="ABC DP">
+        ABC
+      </div>
+      <div class="contact" onclick="showChat('contact5')">
+        <img src="lmn_dp.jpg" alt="LMN DP">
+        LMN
+      </div>
+    </div>
+    
+    <div id="chat-container">
+      <div id="message-input">
+        <input type="text" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="company-updates">
+    <h2>COMPANY UPDATES</h2>
+    <p>Dear students, here are the latest updates and announcements from the company...</p>
+    <!-- Add more content as needed -->
+  </div>
+  <script src="message.js"></script>
+</body>
+</html>

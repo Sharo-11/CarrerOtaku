@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Adjusted to stack sections vertically */
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin: 0;
+  }
+
+  #content {
+    display: flex;
+  }
+
+  #contacts {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ffcb74;
+    margin-right: 20px; /* Added margin for separation */
+    flex-shrink: 0; /* Prevents contact list from shrinking */
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: #ffcb74;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact:hover {
+    background-color: #111;
+    color: #fff;
+  }
+
+  .contact img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  #chat-container {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    overflow-y: auto;
+    margin-bottom: 20px; /* Added margin for separation */
+  }
+
+  #message-input {
+    display: flex;
+    align-items: center;
+    background-color: #ffcb74;
+    padding: 10px;
+    margin-bottom: 20px; /* Added margin for separation */
+  }
+
+  #message-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 100px;
+    align-items: end;
+    
+  }
+
+  #message-input button {
+    background-color: #f2f2f2;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  h2 {
+    color: #111;
+  }
+
+  #company-updates {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+  .message-container {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start; /* Adjusted alignment */
+    flex-direction: column; /* Adjusted to stack messages vertically */
+  }
+
+  .message {
+    display: flex;
+    align-items: center; /* Adjusted alignment */
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+  }
+
+  .message img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .user-message {
+    background-color: #f2f2f2;
+    align-self: flex-end;
+  }
+
+  .contact-message {
+    background-color: #f2f2f2;
+    align-self: flex-start;
+  }
+
+  strong {
+    color: #111;
+  }
