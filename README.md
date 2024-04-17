@@ -35,6 +35,7 @@ Make sure you have Python installed. You can download it from [python.org](https
    pip install flask
    pip install flask-sqlalchemy
    pip install flask-login
+   pip install WTForms
    ```
 
 ### Running the Application
